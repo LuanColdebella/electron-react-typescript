@@ -1,11 +1,11 @@
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export function Home () {
-    return (
+export function Home(){
+  return (
     <div>
-    <h1>Página HOME!!!</h1>
-    <h3>ETSTESTETSTEST</h3>
-    <Link to='/create'>ir para a página create</Link>
+      <h1>Página HOME!!!</h1>
+      <h3>TESTEEEEEEE</h3>
+      <Link to="/create">Ir para pagina create</Link>
     </div>
-    )
+  )
 }

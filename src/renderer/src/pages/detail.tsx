@@ -1,7 +1,7 @@
-export function Detail () {
-    return (
+export function Detail(){
+  return (
     <div>
-    <h1>Página detalhe!!!</h1>
+      <h1>Página Detalhe do cliente!!!</h1>
     </div>
-    )
+  )
 }

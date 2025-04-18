@@ -10,24 +10,24 @@ function createWindow(): void {
     height: 670,
     show: true,
     autoHideMenuBar: true,
-    backgroundColor: '#030712',
-    ...(process.platform === 'linux' ? {
-      icon: path.join(__dirname, "../build/icon.png")
-    } : process.platform === "win32" && {
+    backgroundColor: "#030712",
+    ...(process.platform === 'linux' ? { 
+      icon: path.join(__dirname, "../../build/icon.png")
+     } : process.platform === "win32" && {
       icon: path.join(__dirname, "resources", "icon.png")
-    }),
+     }),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
   })
 
-  // // Mudar icone para o mac
-  // if(process.platform === "darwin"){
-  //   const iconPath = path.resolve(__dirname, "resources", "icon.png")
-  //   app.dock.setIcon(iconPath);
-  // }
-  
+  // Mudar icone para o mac 
+  if(process.platform === "darwin"){
+    const iconPath = path.resolve(__dirname, "resources", "icon.png")
+    app.dock.setIcon(iconPath);
+  }
+
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
@@ -38,10 +38,12 @@ function createWindow(): void {
   })
 
 
-  const devServerURL = createURLRoute(process.env['ELECTRON_RENDERER_URL']!, 'main' )
-  const fileRoute = createFileRoute(join(__dirname, '../renderer/index.html'),
-   'main')
+  const devServerURL = createURLRoute(process.env['ELECTRON_RENDERER_URL']!, 'main')
 
+  const fileRoute = createFileRoute(
+    join(__dirname, '../renderer/index.html'),
+    'main'
+  )
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
@@ -87,5 +89,5 @@ app.on('window-all-closed', () => {
   }
 })
 
-// In this file you can include the rest of your app's specific main process
+// In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
