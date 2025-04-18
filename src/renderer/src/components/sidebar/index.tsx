@@ -8,7 +8,7 @@ export function Sidebar(){
 
   return(
     <Collapsible.Content
-      className='bg-gray-950 flex-shrink-0 border-r border-slate-600 h-screen relative group overflow-hidden'
+      className='bg-gray-950 flex-shrink-0 border-r border-slate-600 h-screen relative group overflow-hidden data-[state=open]:animate-slideIn data-[state=closed]:animate-slideOut'
     >
       <Collapsible.Trigger 
       className={
@@ -26,7 +26,7 @@ export function Sidebar(){
 
       <div 
         className={clsx(
-          'flex-1 flex flex-col h-full gap-8 w-[220px] transition-opacity duration-200',
+          'flex-1 flex flex-col h-full gap-8 w-[220px] transition-opacity group-data-[state=open]:opacity-100 group-data-[state=closed]:opacity-0 duration-200',
           {
             'pt-6': !isMacOS
           }
@@ -43,7 +43,7 @@ export function Sidebar(){
             <LinkContent to="/">Clientes</LinkContent>
 
             <LinkContent to="/create">Cadastrar cliente</LinkContent>
-            
+
             <LinkContent to="/about">Sobre</LinkContent>
           </section>
 
