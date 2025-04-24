@@ -11,7 +11,7 @@ export function Routes(){
     <Router
       main={
         <Route path='/' element={ <Layout/> } >
-          <Route path='/' element={<Home/>} />
+          <Route path='/home' element={<Home/>} />
           <Route path='/create' element={<Create/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/detail' element={<Detail/>} />
