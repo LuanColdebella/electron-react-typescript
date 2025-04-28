@@ -23,7 +23,7 @@ function createWindow(): void {
     }
   })
 
-  // Cria o tray
+  // Chamar para exibir o tray
   createTray(mainWindow)
 
   // Mudar icone para o mac 

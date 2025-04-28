@@ -48,9 +48,10 @@ export function Sidebar(){
           </div>
 
           <section className='flex flex-col gap-px'>
-            <LinkContent to="/home">Home</LinkContent>
-            <LinkContent to="/detail">Clientes</LinkContent>
+            <LinkContent to="/">Clientes</LinkContent>
+
             <LinkContent to="/create">Cadastrar cliente</LinkContent>
+
             <LinkContent to="/about">Sobre</LinkContent>
           </section>
 
