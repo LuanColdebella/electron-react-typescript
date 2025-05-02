@@ -3,8 +3,8 @@ export function Create(){
   async function handleAddCustomer(){
 
     const doc = {
-      name: "Matheus Fraga",
-      email: "teste@teste.com",
+      name: "Lucas Silva",
+      email: "lucas@teste.com",
       phone: "67999999",
       address: "Rua X, centro",
       role: "Frontend",
